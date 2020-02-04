@@ -1,7 +1,7 @@
 from bikeRental import BikeRental, Customer
 
 def main():
-    shop = BikeRental(100)
+    bikerental = BikeRental(100)
     customer = Customer()
 
     while True:
@@ -24,22 +24,22 @@ def main():
             continue
         
         if choice == 1:
-            shop.displaystock()
+            bikerental.displaystock()
         
         elif choice == 2:
-            customer.rentalTime = shop.rentBikeOnHourlyBasis(customer.requestBike())
+            customer.rentalTime = bikerental.rentBikeOnHourlyBasis(customer.requestBike())
             customer.rentalBasis = 1
 
         elif choice == 3:
-            customer.rentalTime = shop.rentBikeOnDailyBasis(customer.requestBike())
+            customer.rentalTime = bikerental.rentBikeOnDailyBasis(customer.requestBike())
             customer.rentalBasis = 2
 
         elif choice == 4:
-            customer.rentalTime = shop.rentBikeOnWeeklyBasis(customer.requestBike())
+            customer.rentalTime = bikerental.rentBikeOnWeeklyBasis(customer.requestBike())
             customer.rentalBasis = 3
 
         elif choice == 5:
-            customer.bill = shop.returnBike(customer.returnBike())
+            customer.bill = bikerental.returnBike(customer.returnBike())
             customer.rentalBasis, customer.rentalTime, customer.bikes = 0,0,0        
         elif choice == 6:
             break

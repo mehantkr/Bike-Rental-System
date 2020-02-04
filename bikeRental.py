@@ -107,6 +107,11 @@ class BikeRental:
             # weekly bill calculation
             elif rentalBasis == 3:
                 bill = round(rentalPeriod.days / 7) * 60 * numOfBikes
+
+            else:
+                bill = 0
+                print("Invalid Rental Basis. {} is not listed.".format(rentalBasis))
+                return Null
             
                
             if (3 <= numOfBikes <= 5):
@@ -135,6 +140,7 @@ class Customer:
         self.bill = 0
 
     
+    # return self.bikes = bikes(input)
     def requestBike(self):
         """
         Takes a request from the customer for the number of bikes.

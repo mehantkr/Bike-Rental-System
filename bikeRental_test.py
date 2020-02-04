@@ -93,7 +93,7 @@ class BikeRentalTest(unittest.TestCase):
         customer.rentalBasis = 7
 
         request = customer.returnBike()
-        self.assertEqual(shop.returnBike(request), 0)
+        self.assertEqual(shop.returnBike(request), 0) # replace 0 with Null
 
     def test_returnBike_for_invalid_numOfBikes(self):
      
